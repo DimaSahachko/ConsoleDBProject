@@ -1,4 +1,4 @@
-package sahachko.ConsoleDBProject.repository;
+package com.sahachko.consoledbproject.repository;
 
 import java.util.List;
 

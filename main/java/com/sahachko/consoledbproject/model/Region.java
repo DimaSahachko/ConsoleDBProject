@@ -1,4 +1,4 @@
-package sahachko.ConsoleDBProject.model;
+package com.sahachko.consoledbproject.model;
 
 public class Region {
 	private Long id;
