@@ -1,16 +1,8 @@
 package com.sahachko.consoledbproject.controller;
 
 import java.util.List;
-
-import com.sahachko.consoledbproject.model.Post;
-import com.sahachko.consoledbproject.model.Region;
-import com.sahachko.consoledbproject.model.Role;
-import com.sahachko.consoledbproject.model.User;
-import com.sahachko.consoledbproject.service.PostService;
-import com.sahachko.consoledbproject.service.RegionService;
-import com.sahachko.consoledbproject.service.UserService;
-
-
+import com.sahachko.consoledbproject.model.*;
+import com.sahachko.consoledbproject.service.*;
 
 public class UserController {
 	private UserService userService;

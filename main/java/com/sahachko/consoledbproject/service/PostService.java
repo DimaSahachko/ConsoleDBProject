@@ -1,34 +1,17 @@
 package com.sahachko.consoledbproject.service;
 
 import java.util.List;
-
 import com.sahachko.consoledbproject.model.Post;
-import com.sahachko.consoledbproject.repository.PostRepository;
 
-public class PostService {
-	private PostRepository repository;
+public interface PostService {
 	
-	public PostService(PostRepository repository) {
-		this.repository = repository;
-	}
+	Post savePost(Post post);
 	
-	public Post savePost(Post post) {
-		return repository.save(post);
-	}
+	Post updatePost(Post post);
 	
-	public Post updatePost(Post post) {
-		return repository.update(post);
-	}
+	Post getPostById(long id);
 	
-	public Post getPostById(long id) {
-		return repository.getById(id);
-	}
+	List<Post> getAllPosts();
 	
-	public List<Post> getAllPosts() {
-		return repository.getAll();
-	}
-	
-	public void deletePostById(long id) {
-		repository.deleteById(id);
-	}
+	void deletePostById(long id);
 }

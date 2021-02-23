@@ -1,11 +1,10 @@
 package com.sahachko.consoledbproject.main;
 
-import java.sql.*;
-import java.util.*;
-
 import com.sahachko.consoledbproject.controller.*;
 import com.sahachko.consoledbproject.repository.*;
+import com.sahachko.consoledbproject.repository.jdbc.*;
 import com.sahachko.consoledbproject.service.*;
+import com.sahachko.consoledbproject.service.implementations.*;
 import com.sahachko.consoledbproject.view.*;
 
 public class Main {
@@ -14,9 +13,9 @@ public class Main {
 		RegionRepository regRepo = new JavaIORegionRepository();
 		PostRepository postRepo = new JavaIOPostRepository();
 		UserRepository userRepo = new JavaIOUserRepository(regRepo, postRepo);
-		RegionService regionService = new RegionService(regRepo);
-		PostService postService = new PostService(postRepo);
-		UserService userService = new UserService(userRepo);
+		RegionService regionService = new RegionServiceImplementation(regRepo);
+		PostService postService = new PostServiceImplementation(postRepo);
+		UserService userService = new UserServiceImplementation(userRepo);
 		RegionController regionController = new RegionController(regionService);
 		PostController postController = new PostController(postService);
 		UserController userController = new UserController(userService, regionService, postService);

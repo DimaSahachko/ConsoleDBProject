@@ -1,10 +1,12 @@
-package com.sahachko.consoledbproject.repository;
+package com.sahachko.consoledbproject.repository.jdbc;
 
 import java.sql.*;
 import java.util.Date;
 import java.util.*;
 
 import com.sahachko.consoledbproject.model.Post;
+import com.sahachko.consoledbproject.repository.ConnectionUtils;
+import com.sahachko.consoledbproject.repository.PostRepository;
 
 public class JavaIOPostRepository implements PostRepository {
 

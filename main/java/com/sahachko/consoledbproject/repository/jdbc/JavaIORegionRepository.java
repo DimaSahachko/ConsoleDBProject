@@ -1,8 +1,10 @@
-package com.sahachko.consoledbproject.repository;
+package com.sahachko.consoledbproject.repository.jdbc;
 
 import java.util.*;
 
 import com.sahachko.consoledbproject.model.Region;
+import com.sahachko.consoledbproject.repository.ConnectionUtils;
+import com.sahachko.consoledbproject.repository.RegionRepository;
 
 import java.sql.*;
 

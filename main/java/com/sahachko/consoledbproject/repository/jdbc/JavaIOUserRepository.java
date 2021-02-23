@@ -1,4 +1,4 @@
-package com.sahachko.consoledbproject.repository;
+package com.sahachko.consoledbproject.repository.jdbc;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.sahachko.consoledbproject.model.*;
+import com.sahachko.consoledbproject.repository.ConnectionUtils;
+import com.sahachko.consoledbproject.repository.PostRepository;
+import com.sahachko.consoledbproject.repository.RegionRepository;
+import com.sahachko.consoledbproject.repository.UserRepository;
 
 public class JavaIOUserRepository implements UserRepository {
 	private RegionRepository regionRepository;

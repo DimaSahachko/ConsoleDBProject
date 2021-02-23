@@ -3,32 +3,16 @@ package com.sahachko.consoledbproject.service;
 import java.util.List;
 
 import com.sahachko.consoledbproject.model.Region;
-import com.sahachko.consoledbproject.repository.RegionRepository;
 
-public class RegionService {
-	private RegionRepository repository;
+public interface RegionService {
 	
-	public RegionService(RegionRepository repository) {
-		this.repository = repository;
-	}
+	Region saveRegion(Region region);
 	
-	public Region saveRegion(Region region) {
-		return repository.save(region);
-	}
-	
-	public Region updateRegion(Region region) {
-		return repository.update(region);
-	}
+	Region updateRegion(Region region);
 
-	public List<Region> getAllRegions() {
-		return repository.getAll();
-	}
+	List<Region> getAllRegions();
 	
-	public Region getRegionById(long id) {
-		return repository.getById(id);
-	}
+	Region getRegionById(long id);
 	
-	public void deleteRegionById(long id) {
-		repository.deleteById(id);
-	}
+	void deleteRegionById(long id);
 }
